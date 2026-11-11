@@ -6,3 +6,7 @@ this only for sentence in ""
 4. click load unpacked button, select folder (chrome extension) that you download earlier.
 
 The custom node is in uilts folder, you can connect that custom node to any tts string input node, (personally i use kokoro) 
+
+5. make your workflow
+6. export workflow as api, make sure the file name is "workflow_api.json"
+7. put the workflow in (chrome extension) folder, along with (manifest.json, background.js)
