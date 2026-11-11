@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Quote to ComfyUI",
+  "version": "3.0",
+  "description": "Kirim teks dalam tanda kutip dari JanitorAI ke ComfyUI, lalu putar hasil TTS",
+  "permissions": ["offscreen"],
+  "host_permissions": [
+    "http://127.0.0.1:8188/*",
+    "http://localhost:8188/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.janitorai.com/*", "*://janitorai.com/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
